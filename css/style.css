@@ -3,10 +3,75 @@ body {
     position: relative;
 }
 
+#main-container {
+    display: flex;
+    flex-flow: row;
+}
+
+
+
+
+/* HEADER  */
+header {
+    height: 100vh;
+    width: 15%;
+    background-color: #000000;
+    z-index: 2;
+    position: fixed;
+}
+
+header #logo {
+    max-width: 100%;
+    height: 10%;
+    background-color: #8b8080;
+}
+
+nav {
+    max-width: 100%;
+    height: calc(90% - 200px);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* /HEADER */
+
+
+
+
+/* MAIN */
+main {
+    width: 85%;
+    background-color: #141922;
+
+}
+/* /MAIN */
+
+
+
+
+/* UP-BAR */
+#up-bar {
+    height: 144px;
+    width: 100%;
+    background-color: #080b12;
+    filter: opacity(50%);
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+/* /UP-BAR */
+
+
+
+
+
+
+
 
 /* DOWN-BAR */
 
-main #down-bar {
+#down-bar {
     position: fixed;
     top: calc(100vh - 150px);
     width: 100vw;
@@ -15,35 +80,36 @@ main #down-bar {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    z-index: 2;
 }
 
-main #down-bar > div {
+#down-bar > div {
     height: 100%;
     width: 500px ;
     background-color: #fff;
     padding: 1em;
 }
 
-main #down-bar #down-left {
+#down-bar #down-left {
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: space-between;
 }
 
-main #down-bar #song-preview {
+#down-bar #song-preview {
     height: 100px;
     max-width: 100px;
     background-color: rgb(245, 245, 142);
 }
 
-main #down-bar #song-descript {
+#down-bar #song-descript {
     height: 100px;
     max-width: 200px;
     background-color: rgb(171, 244, 148);
 }
 
-main #down-bar #heart-folder {
+#down-bar #heart-folder {
     display: flex;
     flex-flow: row wrap;
     max-width: 100px;
@@ -51,24 +117,24 @@ main #down-bar #heart-folder {
     background-color: #f96363;
 }
 
-main #down-bar #down-center {
+#down-bar #down-center {
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-around;
 }
 
-main #down-bar #down-center #center-up {
+#down-bar #down-center #center-up {
     max-width: 100%;
    
 }
 
-main #down-bar #down-center #center-down {
+#down-bar #down-center #center-down {
     max-width: 100%;
     
 }
 
-main #down-bar #down-right {
+#down-bar #down-right {
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -76,3 +142,7 @@ main #down-bar #down-right {
 }
 
 /* //DOWN-BAR */
+
+
+
+
