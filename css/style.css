@@ -2,6 +2,14 @@ body {
     background-color: #141922;
 }
 
+h1, h2, h3 {
+    color: white;
+}
+
+.white-text {
+    color: white;
+}
+
 #big-container {
     width: 100%;
     height: calc(100vh - 90px);
@@ -15,24 +23,85 @@ body {
 /* HEADER  */
 header {
     width: 200px;
-    height: 100vh;
+    height: calc(100vh - 90px);
     width: 20%;
     background-color: #000000;
 }
 
 header #logo {
-    max-width: 100%;
+    max-width: 200px;
+    padding: 1em;
     height: 100px;
-    background-color: #f36a6a;
+    background-color: #00000;
 }
 
 nav {
     max-width: 100%;
-    height: calc(90% - 200px);
-    background-color: #fff;
+    height: calc(100% - 100px);
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: #717171;
+}
+
+nav i {
+    font-size: 2em;
+    color: white;
+}
+
+
+nav #menù {
+    display: flex;
+    flex-flow: column;
+}
+
+nav #menù > div,
+nav #playlist > div,
+nav #account > div {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+nav #playlist {
+    flex-grow: 1;
+
+}
+
+nav #playlist #new-playlist {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+nav #account #account-inner {
+    align-items: flex-start;
+}
+
+nav #account #account-inner-up {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    border-bottom: 1px solid white;
+    padding-bottom: 1em;
+}
+
+nav #account #account-inner-down {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+
+nav #small-download {
+    color: #717171;
+    font-size: 1em;
 }
 /* /HEADER */
 
@@ -46,18 +115,40 @@ main {
     background-color: #141922;
     display: flex;
     flex-flow: column wrap;
-
+    overflow-y: scroll;
 }
 
 main #categories {
     height: 80px;
-    width: 100%;
+    max-width: 100%;
     background-color: #7beaf4;
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
     gap: 3em;
+}
+
+main .row {
+    max-width: 100%;
+    min-height: 180px;
+    background-color: #f2a9dc;
+    margin: 2em 1em 2em 1em;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2em;
+}
+
+main .row h2 {
+    width: 100%;
+}
+
+main .row .album {
+    height: 100px;
+    width: 100px;
+    background-color: #fd4a4a;
+    display: flex;
+    flex-flow: column;
 }
 
 /* /MAIN */
@@ -70,7 +161,8 @@ main #categories {
     height: 100px;
     width: 100%;
     background-color: black;
-    filter: opacity(20%);
+    filter: opacity(50%);
+    z-index: 2;
 }
 /* /UP-BAR */
 
@@ -91,6 +183,7 @@ main #categories {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    z-index: 2;
 }
 
 #down-bar > div {

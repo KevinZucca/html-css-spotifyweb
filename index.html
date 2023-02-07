@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,15 +17,53 @@
 
         <!-- SINISTRA -->
         <header>
-            <div id="logo">LOGO</div>
+            <div id="logo">
+                <img src="spotify/img/logo.svg" alt="big-logo">
+            </div>
             <nav>
                 <div id="menù">
-                    <div id="home" class="menù-logo">MENU</div>
-                    <div id="search" class="menù-logo"></div>
-                    <div id="library" class="menù-logo"></div>
+                    <div id="home" class="menù-logo">
+                        <i class="fa-solid fa-house"></i>
+                        <p class="white-text">Home</p>
+                    </div>
+                    <div id="search" class="menù-logo">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p>Cerca</p>
+                    </div>
+                    <div id="library" class="menù-logo">
+                        <i class="fa-solid fa-book"></i>
+                        <p>La tua libreria</p>
+                    </div>
                 </div>
-                <div id="playlist">PLAYLIST</div>
-                <div id="account">ACCOUNT</div>
+                <div id="playlist">
+                    <div id="title">
+                        <h3>PLAYLIST</h3>
+                    </div>
+                    <div id="add-playlist">
+                        <i class="fa-sharp fa-solid fa-plus"></i>
+                        <p>Crea playlist</p>
+                    </div>
+                    <div id="new-playlist">
+                        <p>Nome playlist</p>
+                        <p>Nome playlist</p>
+                        <p>Nome playlist</p>
+                        <p>Nome playlist</p>
+                        <p>Nome playlist</p>
+                        <p>Nome playlist</p>
+                    </div>
+                </div>
+                <div id="account">
+                    <div id="account-inner">
+                        <div id="account-inner-up">
+                            <i id="small-download" class="fa-regular fa-circle-down"></i>
+                            <p>Installa app</p>
+                        </div>
+                        <div id="account-inner-down">
+                            <i class="fa-regular fa-circle-user"></i>
+                            <h3>John Doe</h3>
+                        </div>
+                    </div>
+                </div>
             </nav>
     
         </header>
@@ -49,9 +88,33 @@
                     <a href="#">link</a>
 
                 </div>
-                <div id="recently-played"></div>
-                <div id="created-for"></div>
-                <div id="most-popular"></div>
+                <div id="recently-played" class="row">
+                    <h2>Recently Played</h2>
+                    <div class="album">
+                        <div class="album-picture">
+                        </div>
+                        <div class="album-description">
+                        </div>
+                    </div>
+
+                    <div class="album">
+                        <div class="album-picture">
+                        </div>
+                        <div class="album-description">
+                        </div>
+                    </div>
+
+                    <div class="album">
+                        <div class="album-picture">
+                        </div>
+                        <div class="album-description">
+                        </div>
+                    </div>
+                </div>
+                <div id="created-for" class="row"></div>
+                <div id="most-popular" class="row"></div>
+
+                
             </div>
                     
             
