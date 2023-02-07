@@ -1,0 +1,78 @@
+body {
+    background-color: #141922;
+    position: relative;
+}
+
+
+/* DOWN-BAR */
+
+main #down-bar {
+    position: fixed;
+    top: calc(100vh - 150px);
+    width: 100vw;
+    height: 150px;
+    background-color: #282828;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+main #down-bar > div {
+    height: 100%;
+    width: 500px ;
+    background-color: #fff;
+    padding: 1em;
+}
+
+main #down-bar #down-left {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main #down-bar #song-preview {
+    height: 100px;
+    max-width: 100px;
+    background-color: rgb(245, 245, 142);
+}
+
+main #down-bar #song-descript {
+    height: 100px;
+    max-width: 200px;
+    background-color: rgb(171, 244, 148);
+}
+
+main #down-bar #heart-folder {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 100px;
+    height: 100px;
+    background-color: #f96363;
+}
+
+main #down-bar #down-center {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main #down-bar #down-center #center-up {
+    max-width: 100%;
+   
+}
+
+main #down-bar #down-center #center-down {
+    max-width: 100%;
+    
+}
+
+main #down-bar #down-right {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* //DOWN-BAR */
