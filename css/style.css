@@ -27,7 +27,9 @@ p {
 
 /* HEADER  */
 header {
-    min-width: 20%;
+    display: flex;
+    flex-flow: column;
+    width: 20%;
     height: calc(100vh - 90px);
     background-color: #000000;
     z-index: 2;
@@ -42,12 +44,13 @@ header #logo {
 
 nav {
     max-width: 100%;
-    height: calc(100% - 100px);
     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: #717171;
+    flex-grow: 1;
+    padding: 1em;
 }
 
 nav i {
@@ -72,6 +75,8 @@ nav #account > div {
 }
 
 nav #playlist {
+    display: flex;
+    flex-flow: column;
     flex-grow: 1;
 
 }
@@ -88,19 +93,18 @@ nav #playlist #add-playlist #plus-playlist {
     padding: 0.3em;
 }
 
-nav #account #account-inner {
+nav #account {
     display: flex;
     flex-flow: column;
-
 }
+
 
 nav #account #account-inner-up {
     display: flex;
     flex-flow: row;
     align-items: center;
     gap: 1em;
-    width: 100%;
-    border-bottom: 1px solid white;
+    max-width: 100%;
     padding-bottom: 1em;
 }
 
@@ -108,12 +112,17 @@ nav #account #account-inner-down {
     display: flex;
     flex-flow: row;
     gap: 1em;
-    width: 100%;
+    max-width: 100%;
+    padding-top: 1em;
 }
 
 nav #small-download {
     color: #717171;
     font-size: 1em;
+}
+
+nav hr {
+    width: 90%;
 }
 /* /HEADER */
 
@@ -142,7 +151,7 @@ main #categories {
     min-height: 80px;
     max-width: calc(100% - 3em);
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 3em;
@@ -299,7 +308,6 @@ main .row h3 {
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    min-width: 300px;
     max-width: 700px;
     width: 100%;
 }
@@ -324,7 +332,8 @@ main .row h3 {
 }
 
 #down-bar #down-center #center-down #play-bar {
-   width: 400px;
+   max-width: 400px;
+   width: 100%;
    height: 4px;
    border-radius: 6px;
    background-color: #717171;
@@ -367,7 +376,8 @@ main .row h3 {
 }
 
 #down-bar #down-right #barra-volume {
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
     height: 4px;
     background-color: #717171;
     border-radius: 6px;
@@ -409,10 +419,10 @@ main #main-container #categories {
 
 
 /* RESPONSIVE MOBILE */
-@media screen and (max-width:767px) {
+@media screen and (min-width:576px) and (max-width:767px) {
 
     main #main-container .row .album {
-        width: calc(100% / 2 );
+        width: calc(100% / 2 - 30px);
         display: flex;
         flex-flow: column wrap;
         align-items: center;
@@ -420,6 +430,33 @@ main #main-container #categories {
 
     }
 
+    main #categories {
+        flex-wrap: wrap;
+        gap: 2.5em;
+    }
+
+    nav {
+        font-size: 0.8em;
+    }
+
 }
+
+
+/* RESPONSIVE SMALL MOBILE */
+@media screen and (max-width:575px) {
+
+    header #logo  {
+        display: none;
+    }
+
+    header nav p, nav h3{
+        display: none;
+    }
+
+    header nav #plus-playlist {
+        display: none;
+    }
+
+} 
     
 
