@@ -27,9 +27,8 @@ p {
 
 /* HEADER  */
 header {
-    width: 200px;
+    min-width: 20%;
     height: calc(100vh - 90px);
-    width: 20%;
     background-color: #000000;
     z-index: 2;
 }
@@ -66,10 +65,10 @@ nav #menù > div,
 nav #playlist > div,
 nav #account > div {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     align-items: center;
     gap: 1em;
-    padding: 1em;
+    padding: 0.5em 1em; 
 }
 
 nav #playlist {
@@ -83,13 +82,21 @@ nav #playlist #new-playlist {
     align-items: flex-start;
 }
 
+nav #playlist #add-playlist #plus-playlist {
+    background-color: #717171;
+    color: black;
+    padding: 0.3em;
+}
+
 nav #account #account-inner {
-    align-items: flex-start;
+    display: flex;
+    flex-flow: column;
+
 }
 
 nav #account #account-inner-up {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     align-items: center;
     gap: 1em;
     width: 100%;
@@ -99,8 +106,7 @@ nav #account #account-inner-up {
 
 nav #account #account-inner-down {
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    flex-flow: row;
     gap: 1em;
     width: 100%;
 }
@@ -116,18 +122,20 @@ nav #small-download {
 
 /* MAIN */
 main {
-    width: calc(100vw - 200px);
-    height: 100%;
+    width: calc(100vw - 20%);
+    height: calc(100vh - 90px);
     background-color: #141922;
     display: flex;
     flex-flow: column;
     overflow-y: scroll;
     padding-top: 110px;
     position: relative;
+    overflow-x: hidden;
 }
 
 main #main-container {
     height: calc(100% - 180px);
+    width: 100%;
 }
 
 main #categories {
@@ -147,7 +155,7 @@ main #categories a {
 }
 
 main .row {
-    width: calc((100% / 6 * 5) - (30px / 6 * 5));
+    width: 100%;
     margin: 2em 1em 2em 1em;
     display: flex;
     flex-flow: row wrap;
@@ -226,14 +234,12 @@ main .row h3 {
 /* DOWN-BAR */
 
 #down-bar {
-    top: calc(100vh - 90px);
     max-width: 100vw;
     height: 90px;
     background-color: #282828;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    z-index: 2;
 }
 
 #down-bar > div {
@@ -248,6 +254,8 @@ main .row h3 {
     flex-flow: row;
     align-items: center;
     justify-content: flex-start;
+    max-width: 350px;
+    width: 100%;
 }
 
 #down-bar #down-left #song-preview {
@@ -265,14 +273,14 @@ main .row h3 {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    flex-grow: 1;
     font-size: 0.8em;
-    flex-grow: 0.3;
 }
 
 
 #down-bar #heart-folder {
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 1em;
@@ -290,20 +298,24 @@ main .row h3 {
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    min-width: 300px;
+    max-width: 700px;
+    width: 100%;
 }
 
 #down-bar #down-center #center-up {
-    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-flow: row;
     align-items: center;
+    justify-content: center;
     gap: 2em;
    
 }
 
 #down-bar #down-center #center-down {
-    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-flow: row;  
     justify-content: space-around;
@@ -314,10 +326,16 @@ main .row h3 {
 #down-bar #down-center #center-down #play-bar {
    width: 400px;
    height: 4px;
-   border-radius: 30px;
+   border-radius: 6px;
    background-color: #717171;
 }
 
+#down-bar #down-center #center-down #play-bar #play-bar-current {
+    height: 100%;
+    width: 20%;
+    background-color: #c1c1c1;
+    border-radius: 6px;
+}
 
 #down-bar #down-center i {
     font-size: 2em;
@@ -332,12 +350,16 @@ main .row h3 {
 
 
 
+
+
 #down-bar #down-right {
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: flex-end;
     gap: 1em;
+    max-width: 350px;
+    width: 100%;
 }
 
 #down-bar #down-right i {
@@ -348,6 +370,14 @@ main .row h3 {
     width: 200px;
     height: 4px;
     background-color: #717171;
+    border-radius: 6px;
+}
+
+#down-bar #down-right #barra-volume #barra-volume-current {
+    height: 100%;
+    width: 15%;
+    background-color: #c1c1c1;
+    border-radius: 6px;
 }
 
 /* //DOWN-BAR */
@@ -356,9 +386,9 @@ main .row h3 {
 
 /* RESPONSIVE TABLET */
 @media screen and (min-width:768px) and (max-width:992px) {
-    
+
 main .row .album {
-    width: calc(100% / 4 - 2em);
+    width: calc(100% / 4 - 30px);
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -366,7 +396,7 @@ main .row .album {
 }
 
 main #main-container #categories {
-    max-width: calc(100%);
+    max-width: calc(100% - 3em);
     height: 80px;
     display: flex;
     flex-flow: row wrap;
