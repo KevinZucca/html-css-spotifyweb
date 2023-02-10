@@ -308,6 +308,7 @@ main .row h3 {
     justify-content: flex-end;
     align-items: center;
     padding-right: 3em;
+    z-index: 3;
 }
 
 #up-bar a {
